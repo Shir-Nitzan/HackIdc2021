@@ -1,44 +1,64 @@
-# python-web app-template
-A template python web app that includes common web pages. Will be continuously updated.
 
-## Requirements
+# 🚙 PicReport - HackIdc 2021
 
-Written for Python 3 with minimal dependencies (in `requirements.txt`):
 
-* Flask
-* (optional - for login) flask-login
-* (Optional - for image upload) pillow
-* (Optional - for chat) watson_developer_cloud
+PicReport is a web application, with a server written in python - flask and client written in vanilla js, jquery, html, css and bootstrap.
+It will automatically fill in for you the insurance forms that need to be fill out in a car accident incident,
+by provided images of - driver license, car license and car policy.
 
-## UI
+## How to run
 
-UI content inlcudes:
+You can run this app by following these steps.
 
- * Login
- * Chat
- * Simple Input
- * File Upload and Sample Download
- * Read CSV and show dynamic tables
- * Image Upload
- 
-You can remove the UI pages you don't need by removing their relevant files in `templates/`, `static/stylesheets/`, and `static/javascript`. 
+```bash
+git clone 
+```
 
-![login](images/login.png)
-![chat](images/chat.png)
-![main](images/main.png)
+Text extraction:
 
-## Web app
+You’ll need to install 2 libraries- 
 
-* `app.py` contains the Flask server.
-* `functions/` contains utilities and functionalities, this is to be used to avoid cluttering the main app file. 
-* The different UI routes (and their relevant methods) are sectioned in `app.py`. You can remove any sections which you don't need.
-* APIs: APIs sample is implimented in `/api/...` route, modify te content and/or route name in `app.py ` as per your needs. There is more than one route to handle a GET request and more than one route for POST requests. The POST request handles image upload through forms and chat messages.
-* Chat: impliment the chat functionality in the `api/message` route in `app.py`. See [Watson Assistant](### Watson Assistant) below for more information.
+OpenCV which used to load images use -
+```bash
+pip install opencv-python
+```
 
-### Watson Assistant
+Once this installation was successful, install PyTesseract which is the actual library that converts image into text;
+first, use this link - https://github.com/UB-Mannheim/tesseract/wiki
+to download the 64/32 bit version that matches your laptop. Once you got that cover, use - 
+```bash
+pip install pytesseract
+```
 
-To use the conversation service (Watson Assistant), you need to put in your credentials in `vcap-local.json`, which you can obtain from [IBM Cloud](console.bluemix.net). In `app.py`, use the [Watson Assistant](https://www.ibm.com/cloud/watson-assistant/) sections to handle the conversation or replace with your own methods for handling. In `chat.js`, `sendRequest(message)` handles sending the post request to server. The `req` object  can be extended to pass additional information back back to the server; on the server, this information is to be handled in the `message()` function in a similar manner to `msg`.  
+In order to make sure this library will be compatible for hebrew as well, please download this file from github and save it in the following location- 
+```bash
+C:\Program Files\Tesseract-OCR\tessdata
+```
 
-## Cloud Foundry
+For this library, we need to tell python where Tesseract is installed, the last line in the following code snippet does exactly that-
+```bash
+Import cv2
+Import pytesseract
+Pytesseract.pytesseract.tesseract_cmd = r'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'
+```
 
-The application is CF ready, just type `cf push app-name` after logging in on the cf command line and it should push. 
+Web - Application
+Please install-
+```bash
+pip install flask
+pip install flask-login
+```
+
+## Use case 📲
+1. Run the python server from app.py start point.
+2. Enter localhost:
+```bash
+http://127.0.0.1:8080/
+```
+3. Follow the demo:
+
+![HackatonIDC2021](https://user-images.githubusercontent.com/62726511/120941407-4cbe6780-c72b-11eb-9158-a4371a007288.gif)
+
+4. Once you upload images of driver license, car license and car policy, the app will automatically fill all of the forms details 📝.
+
+
