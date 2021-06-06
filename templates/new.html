@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--    <title>Title</title>-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+            crossorigin="anonymous"></script>
+    <link href="static/stylesheets/new.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-dark bg-primary navbar-fixed-top">
+    <a class="navbar-brand" href="#">Initial report</a>
+</nav>
+
+<!-- Input and GET Request -->
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                role="tab" aria-controls="home" aria-selected="true">Third Party Details
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                role="tab" aria-controls="profile" aria-selected="false">My Information
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button"
+                role="tab" aria-controls="contact" aria-selected="false">Contact
+        </button>
+    </li>
+</ul>
+
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="container" style="height: 100vh; padding-top: 2rem;">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card" id="card1">
+                        <div class="driverLicense image-holder">
+                            <label  class="inputLabel" for="img-input1">Add a drivers license</label>
+                            <img id="img1" class="card-img-top gone">
+                            <form id="form1" method="POST" enctype="multipart/form-data">
+                                <div class="input-group mb-3">
+                                    <div class="custom-file">
+                                        <input type="file" class="file-input" id="img-input1" name="image">
+                                    </div>
+                                </div>
+
+                            </form>
+                            <p> Driver License Image</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" id="card2">
+                        <div class="carLicense image-holder">
+                            <label id="getImage" class="inputLabel" for="img-input2">Add a drivers license</label>
+                            <img id="img2" class="card-img-top gone">
+                            <form id="form2" method="POST" enctype="multipart/form-data">
+                                <div class="input-group mb-3">
+                                    <div class="custom-file">
+                                        <input type="file" class="file-input" id="img-input2" name="image">
+                                    </div>
+                                </div>
+                                <p>Car License Image</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                     <div class="card" id="card3">
+                        <div class="insurance image-holder">
+                            <label  class="inputLabel" for="img-input3">Add a drivers license</label>
+                            <img id="img3" class="card-img-top gone">
+                            <form id="form3" method="POST" enctype="multipart/form-data">
+                                <div class="input-group mb-3">
+                                    <div class="custom-file">
+                                        <input type="file" class="file-input" id="img-input3" name="image">
+                                    </div>
+                                </div>
+                                 <p>Car Insurance Image</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn-primary" href="#section2" style="margin-top: 50px;">next</a>
+        </div>
+        <div class="container" style="height: 100vh" id="section2">
+            <h1>Form Details</h1>
+
+            <!--form1!!!-->
+
+            <form id="licenseDriver1">
+                <div style="padding-top: 25px">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" class="firstName form-control" data-tx="firstName"
+                               placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" class="lastName form-control" data-tx="firstName"
+                               placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label>License Number</label>
+                        <input type="text" class="licenseNumber form-control" data-tx="firstName"
+                               placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label>Birthday</label>
+                        <input type="text" class="birthday form-control" data-tx="firstName"
+                               placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label>ID</label>
+                        <input type="text" class="id form-control" data-tx="firstName"
+                               placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label>License Level</label>
+                        <input type="text" class="licenseLevel form-control" data-tx="firstName"
+                               placeholder="">
+                    </div>
+<!--                    <div class="form-check">-->
+<!--                        <input type="checkbox" class="validLicense validLicense form-check-input">-->
+<!--                        <label class="form-check-label">Is Valid License?</label>-->
+<!--                    </div>-->
+<!--                    <div class="form-check">-->
+<!--                        <input type="checkbox" class="driverIsInsure form-check-input">-->
+<!--                        <label class="form-check-label">Is Driver Insured?</label>-->
+<!--                    </div>-->
+                    <div style="padding-top: 25px">
+                        <div class="form-group">
+                            <label>Incident Description</label>
+                            <input type="text" class="incidentDesc form-control" data-tx="firstName"
+                                   placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+                <div style="padding-top: 25px">
+                    <h1>Car License Details</h1>
+
+                    <div id="carLicense">
+                        <div class="form-group">
+                            <label>Owner Name</label>
+                            <input type="text" class="ownerName  form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Creation Year</label>
+                            <input type="text" class="creationYear form-control" data-tx="firstName"
+                                   placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label>Model</label>
+                            <input type="text" class="model form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Car Number</label>
+                            <input type="text" class="carNumber form-control" data-tx="firstName"
+                                   placeholder="">
+                        </div>
+
+                    </div>
+                </div>
+                <!--    policy = {-->
+                <!--        "policyOwnerName": get_policy_owner_name(tokens),-->
+                <!--        "policyNumber": get_policy_number(tokens),-->
+                <!--    }-->
+                <div style="padding-top: 25px; padding-bottom: 40px;">
+                    <h1>Car Insurance Details</h1>
+
+                    <div id="carInsurance">
+                        <div class="form-group">
+                            <label>Policy Owner Name</label>
+                            <input type="text" class="policyOwnerName  form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Policy Number</label>
+                            <input type="text" class="policyNumber form-control" data-tx="firstName"
+                                   placeholder="">
+                        </div>
+                    </div>
+                </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <!--form end-->
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+        <div class="container" style="height: 100vh; padding-top: 2rem;">
+            <div class="row">
+                <div class="col-4">
+
+                    <div class="card" id="card4">
+                        <div class="driverLicense image-holder">
+                            <label  class="inputLabel" for="img-input4">Add a drivers license</label>
+                            <img id="img4" class="card-img-top gone">
+                            <form id="form4" method="POST" enctype="multipart/form-data">
+                                <div class="input-group mb-3">
+                                    <div class="custom-file">
+                                        <input type="file" class="file-input" id="img-input4" name="image">
+                                    </div>
+                                </div>
+                                   <p> Driver License Image</p>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <div class="card" id="card5">
+                        <div class="crushedCars image-holder">
+                            <label  class="inputLabel" for="img-input5">Add a drivers license</label>
+                            <img id="img5" class="card-img-top gone">
+                            <form id="form5" method="POST" enctype="multipart/form-data">
+                                <div class="input-group mb-3">
+                                    <div class="custom-file">
+                                        <input type="file" class="file-input" id="img-input5" name="image">
+                                    </div>
+                                </div>
+                                  <p>Car Damage Image</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn-primary" href="#section3" style="margin-top: 50px;">next</a>
+        </div>
+        <div style="height: 100vh" id="section3">
+
+
+            <!--form!!!-->
+            <div class="container">
+                <h1>Form Details</h1>
+                <form id="licenseDriver2">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" class="firstName form-control" data-tx="firstName"
+                               placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" class="lastName form-control" data-tx="firstName"
+                               placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label>License Number</label>
+                        <input type="text" class="licenseNumber form-control" data-tx="firstName"
+                               placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label>Birthday</label>
+                        <input type="text" class="birthday form-control" data-tx="firstName"
+                               placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label>ID</label>
+                        <input type="text" class="id form-control" data-tx="firstName"
+                               placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label>License Level</label>
+                        <input type="text" class="licenseLevel form-control" data-tx="firstName"
+                               placeholder="">
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="validLicense validLicense form-check-input">
+                        <label class="form-check-label">Is Valid License?</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="driverIsInsure form-check-input">
+                        <label class="form-check-label">Is Driver Insured?</label>
+                    </div>
+                    <div style="padding-top: 25px">
+                        <div class="form-group">
+                            <label>Incident Description</label>
+                            <input type="text" class="incidentDesc form-control" data-tx="firstName"
+                                   placeholder="">
+                        </div>
+                    </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <!--form end-->
+        </div>
+
+
+    </div>
+</div>
+<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="static/javascript/index.js" type="text/javascript"></script>
+
+</body>
+</html>

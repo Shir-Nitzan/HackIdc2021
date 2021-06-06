@@ -1,0 +1,60 @@
+ # Example of data - driver3
+        # demo_dict = {
+        #     "policyOwnerName": "ישראלי ישראל",
+        #     "policyNumber": "1234567890",
+        #     "driver": "3",
+        # }
+        # Example of data - driver2
+        # demo_dict = {
+        #     'ownerName': 'ישראלי ישראלה',
+        #     'creationYear': '2005',
+        #     'carType': 'P',
+        #     'model': 'טויוטה יאריס',
+        #     'carNumber': '123456',
+        #     'driver' : 2
+        # }
+
+         # Example of data - driver5
+        # demo_dict = {
+        #     'lastName': 'Israeli',
+        #     'firstName': 'Israela',
+        #     'id': '123456789',
+        #     'birthday': '21.12.1960',
+        #     'licenseNumber': '7654321',
+        #     'driverIsInsured': True,
+        #     'validLicense': True,
+        #     'licenseLevel': 'B',
+        #     'publicationDate': '21.12.2020',
+        #     'expirayDate': '01.05.2004',
+        #     'driver': 5
+        # }
+
+        # Example of data - driver4
+        # demo_dict = {
+        #     'lastName': 'Israeli',
+        #     'firstName': 'Israela',
+        #     'id': '123456789',
+        #     'birthday': '21.12.1960',
+        #     'licenseNumber': '7654321',
+        #     'driverIsInsured': True,
+        #     'validLicense': True,
+        #     'licenseLevel': 'B',
+        #     'publicationDate': '21.12.2020',
+        #     'expirayDate': '01.05.2004',
+        #     'driver': 4
+        # }
+
+          # Example of data - driver1
+        # demo_dict = {
+        #     'lastName': 'Israeli',
+        #     'firstName': 'Israela',
+        #     'id': '123456789',
+        #     'birthday': '21.12.1960',
+        #     'licenseNumber': '7654321',
+        #     'driverIsInsured': True,
+        #     'validLicense': True,
+        #     'licenseLevel': 'B',
+        #     'publicationDate': '21.12.2020',
+        #     'expirayDate': '01.05.2004',
+        #     'driver': 1
+        # }

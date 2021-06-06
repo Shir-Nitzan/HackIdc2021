@@ -1,0 +1,64 @@
+.card-img-top{
+    height: 200px;
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    pointer-events: none;
+}
+.image-holder{
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+
+}
+.image-holder:hover{
+    cursor: pointer;
+}
+.driverLicense{
+    background-image: url('https://media.istockphoto.com/vectors/driver-license-card-in-hand-id-number-and-photo-included-vector-vector-id1187157382?k=6&m=1187157382&s=612x612&w=0&h=bvzkCKqj_NEccN08tSeTaUPHfha5L4PE4m-UCSUeZfs=');
+}
+.carLicense{
+background-image: url('https://images.livemint.com/rf/Image-621x414/LiveMint/Period2/2018/10/18/Photos/Processed/car1-k7DH--621x414@LiveMint.jpg');
+}
+
+.insurance{
+background-image: url('https://images.livemint.com/rf/Image-621x414/LiveMint/Period2/2018/10/18/Photos/Processed/car1-k7DH--621x414@LiveMint.jpg');
+}
+
+
+.carLicense{
+    background-image: url('https://previews.123rf.com/images/amaviael/amaviael1804/amaviael180400012/100403332-examiner-filling-in-driver-s-license-road-test-form-sitting-with-her-student-inside-a-car.jpg');
+}
+
+.crushedCars{
+ background-image: url('https://i0.wp.com/hausa.leadership.ng/wp-content/uploads/2018/09/13097559-car-accident.jpg?fit=1300%2C919&ssl=1')
+}
+
+
+.image-txt{
+position: absolute;
+top: 100px;
+left: 33%;
+width:100%;
+height: 100%;
+}
+
+.inputLabel{
+    width:100%;
+    height:100%;
+    opacity: 0;
+}
+
+.file-input{
+display:none;
+    opacity:0;
+    width:100%;
+    height:100%;
+    position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+}
