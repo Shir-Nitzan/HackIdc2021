@@ -11,7 +11,7 @@ by provided images of - driver license, car license and car policy.
 You can run this app by following these steps.
 
 ```bash
-git clone 
+git clone https://github.com/Shir-Nitzan/HackIdc2021.git
 ```
 
 Text extraction:
